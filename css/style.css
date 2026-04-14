@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --primary: #198754;
+  --primary-hover: #146c43;
+  --secondary: #0f5132;
+  --bg-color: #f8f9fa;
+  --surface: #ffffff;
+  --surface-border: #dee2e6;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --success: #198754;
+  --danger: #dc3545;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Egyszerűbb, világos zöld-fehér focis átmenet */
+body {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header - "Bénább", hagyományos zöld sáv */
+header {
+  background: linear-gradient(90deg, #1b5e20, #388e3c);
+  padding: 1.5rem 2rem;
+  border-bottom: 5px solid #4caf50;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Egyszerű gomb-szerű menü */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  background-color: #2e7d32;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #1b5e20;
+}
+
+nav a:hover, nav a.active {
+  background-color: #4caf50;
+  border-color: #388e3c;
+  color: white;
+}
+
+/* Main Content Area */
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Kiszedtük a Glassmorphism kódot, sima fehér doboz */
+.glass-panel {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 4px; /* Kis lekerekítés csak */
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Minimális, nem tolakodó árnyék */
+}
+
+.glass-panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1b5e20;
+  border-bottom: 2px solid #81c784;
+  padding-bottom: 0.5rem;
+}
+
+/* Hagyományos űrlap elemek */
+.crud-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.crud-form input {
+  background: #fff;
+  border: 1px solid #ced4da;
+  color: var(--text-main);
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.crud-form input:focus {
+  outline: none;
+  border-color: #81c784;
+}
+
+/* Hagyományosabb, nem lebegő gombok */
+button {
+  background: var(--primary);
+  color: white;
+  border: 1px solid var(--secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button.btn-danger {
+  background: #f8dbdf;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+button.btn-danger:hover {
+  background: #dc3545;
+  color: white;
+}
+
+button.btn-edit {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+button.btn-edit:hover {
+  background: #ffc107;
+  color: #212529;
+}
+
+/* Egyszerűbb táblázat */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--surface-border);
+  background: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--surface-border);
+  border-right: 1px solid var(--surface-border);
+}
+
+th {
+  background: #e9ecef;
+  font-weight: bold;
+  color: #495057;
+}
+
+/* Sávos megjelenés */
+tr:nth-child(even) {
+  background-color: #f1f8e9;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Sötét lábléc zöld éllel */
+footer {
+  background: #212529;
+  border-top: 4px solid #4caf50;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer p span {
+  color: #a5d6a7;
+  font-weight: bold;
+}
+
+/* Kezdőoldal */
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero p {
+  color: #333;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* OOJS menü gombok – ugyanaz a stílus, mint a nav menüben */
+.menu-btn {
+  color: white;
+  background-color: #2e7d32;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #1b5e20;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: 0.2s;
+}
+
+.menu-btn:hover {
+  background-color: #4caf50;
+  border-color: #388e3c;
+  color: white;
+}
+
+/* Aktív gomb – pont mint a nav .active */
+.menu-btn.active {
+  background-color: #4caf50;
+  border-color: #388e3c;
+  color: white;
+}
+
+.axios-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.td-action,
+.th-action {
+  width: 1%;
+  white-space: nowrap;
+}
+
