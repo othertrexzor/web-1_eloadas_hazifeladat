@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Webprogramozás 1 beadandó feladat megoldása">
+</head>
+
+<body>
+    <header>
+        <h1>Web programozás-1 Előadás Házi feladat</h1>
+        <nav>
+            <a href="index.html">Főoldal</a>
+            <a href="javascript.html">Csapatok listája (JS CRUD)</a>
+            <a href="react.html">Játékosok (React CRUD)</a>
+            <a href="spa.html">SPA React</a>
+            <a href="fetchapi.html" class="active">Fetch API</a>
+            <a href="axios.html">Axios CRUD</a>
+            <a href="oojs.html">OOJS</a>
+        </nav>
+    </header>
+    <main>
+        <section class="glass-panel">
+            <h2>Posztok</h2>
+            <form id="crud-form" class="crud-form">
+                <input type="hidden" id="poszt-id" name="poszt-id">
+                <input type="text" id="poszt-name" name="poszt-name" placeholder="Poszt megadása (pl. kapus)" required autocomplete="off">
+                <button type="submit" id="submit-btn">Hozzáadás</button>
+            </form>
+
+            <div class="table-container">
+                <table id="posts-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">ID</th>
+                            <th>Poszt</th>
+                            <th style="width: 20%; text-align: right;">Műveletek</th>
+                        </tr>
+                    </thead>
+                    <tbody id="posztTableBody">
+                        <!-- Javascript tölti ki -->
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Készítette: <span>dr. Fekete József, Jobbágy Bertalan</span> | Neptun kód: <span>WXZS41, IQGE2B</span></p>
+    </footer>
+ 
+    <script src="fetchapi/js/main.js"></script>
+</body>
+
+</html>
