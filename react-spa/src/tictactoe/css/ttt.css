@@ -1,0 +1,61 @@
+.spa-menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.game-container {
+    display: flex;
+    gap: 2rem;       /* Kis távolság a tábla és a lépések között */
+    flex-wrap: wrap; /* Kis képernyőn alá kerüljenek */
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+}
+
+.board-row {
+    display: flex;
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #1b5e20;
+}
+
+.status {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1b5e20;
+}
+
+.game-info ol {
+    padding-left: 1rem;
+    list-style: none;
+}
+
+.game-info button {
+    margin-bottom: 0.25rem;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 1px solid #1b5e20;
+    border-radius: 4px;
+    background-color: #1b5e20;
+}
+
+.game-info button:hover {
+    background-color: #c8e6c9;
+}
