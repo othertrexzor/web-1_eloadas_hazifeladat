@@ -24,7 +24,11 @@ const inputId = document.getElementById('club-id');
 const submitBtn = document.getElementById('submit-btn');
 const tableBody = document.getElementById('table-body');
 
-// Read (Render list)
+/**
+ * Megjeleníti a csapatok listáját a HTML táblázatban.
+ * Törli a táblázat jelenlegi tartalmát, majd újra feltölti azt
+ * a `clubs` tömb aktuális állapota alapján.
+ */
 function renderTable() {
     tableBody.innerHTML = '';
     
@@ -96,7 +100,10 @@ form.addEventListener('submit', (e) => {
     renderTable();
 });
 
-// Load data into form for update
+/**
+ * Betölti a kiválasztott csapat adatait az űrlapba módosítás céljából.
+ * @param {number} id - A módosítandó csapat egyedi azonosítója.
+ */
 function loadClubForEdit(id) {
     const club = clubs.find(c => c.id === id);
     if (!club) return;
@@ -106,7 +113,11 @@ function loadClubForEdit(id) {
     submitBtn.textContent = 'Mentés';
 }
 
-// Delete
+/**
+ * Töröl egy csapatot és frissíti a táblázatot.
+ * Törlés előtt a felhasználó megerősítését kéri.
+ * @param {number} id - A törlendő csapat egyedi azonosítója.
+ */
 function deleteClub(id) {
     if (confirm('Biztosan törölni szeretnéd ezt a csapatot?')) {
         clubs = clubs.filter(c => c.id !== id);
@@ -118,7 +129,10 @@ function deleteClub(id) {
     }
 }
 
-// Helper to reset form
+/**
+ * Visszaállítja az űrlap beviteli mezőit az alapértelmezett üres állapotba,
+ * és az elküldés gomb feliratát.
+ */
 function resetForm() {
     inputId.value = '';
     inputName.value = '';
