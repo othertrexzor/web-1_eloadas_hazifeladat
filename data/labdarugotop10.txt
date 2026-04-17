@@ -1,0 +1,10 @@
+1;Haris Attila;18
+2;Németh Márió;31
+3;Jovanovic Aleksandar;77
+4;Kuti Krisztián;14
+5;Diallo Ulysse;9
+6;Balogh Balázs;12
+7;Molnár Gábor;33
+8;Báló Tamás;7
+9;Pátkai Máté;17
+10;Iszlai Bence;10
