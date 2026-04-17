@@ -4,7 +4,7 @@ function App() {
     const [players, setPlayers] = React.useState([]);
 
     React.useEffect(() => {
-        fetch('databases/labdarugo.txt')
+        fetch('data/labdarugotop10.txt')
             .then(res => res.text())
             .then(text => {
                 const lines = text.trim().split('\n');
@@ -20,6 +20,10 @@ function App() {
     const [number, setNumber] = React.useState('');
     const [editId, setEditId] = React.useState(null);
 
+    /**
+     * Kezeli az űrlap beküldését egy játékos létrehozásához vagy frissítéséhez.
+     * Ellenőrzi a beviteli adatokat (név formátuma, mezőszám tartománya) a mentés előtt.
+     */
     const handleSubmit = (event) => {
         event.preventDefault();
         const trimmedName = name.trim();
@@ -53,6 +57,10 @@ function App() {
         setNumber('');
     };
 
+    /**
+     * Szövegmezőkbe tölti a szerkesztendő játékos adatait.
+     * @param {Object} player - A szerkesztendő játékos objektum.
+     */
     const handleEdit = (player) => {
         setName(player.name);
         setNumber(player.number.toString());
@@ -61,6 +69,11 @@ function App() {
         if (input) input.focus();
     };
 
+    /**
+     * Töröl egy játékost a listából, miután rákérdezett a törlésre.
+     * Üríti az űrlapot is, ha épp a törölt játékost szerkesztettük.
+     * @param {number} id - A törlendő játékos azonosítója.
+     */
     const handleDelete = (id) => {
         if (window.confirm('Biztosan törölni szeretnéd ezt a játékost?')) {
             setPlayers(players.filter(p => p.id !== id));
