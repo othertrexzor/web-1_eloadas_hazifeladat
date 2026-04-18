@@ -4,6 +4,7 @@ $host = "localhost";
 $dbname = "nb1";
 $username = "nb1";
 $password = "A123.B456";
+//20260418 a connectonhöz a credek mosítva lettek
 
 try{
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8",$username,$password);
